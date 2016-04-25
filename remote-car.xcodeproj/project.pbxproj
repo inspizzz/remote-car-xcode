@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		740196201CCEA184008CE298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401961F1CCEA184008CE298 /* AppDelegate.swift */; };
 		740196221CCEA184008CE298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740196211CCEA184008CE298 /* ViewController.swift */; };
-		740196251CCEA184008CE298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740196231CCEA184008CE298 /* Main.storyboard */; };
 		740196271CCEA184008CE298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740196261CCEA184008CE298 /* Assets.xcassets */; };
-		7401962A1CCEA184008CE298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740196281CCEA184008CE298 /* LaunchScreen.storyboard */; };
+		740196321CCEA40A008CE298 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740196311CCEA40A008CE298 /* BLE.swift */; };
+		740196341CCEA43A008CE298 /* CarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740196331CCEA43A008CE298 /* CarController.swift */; };
+		740196361CCEA43F008CE298 /* PeripheralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740196351CCEA43F008CE298 /* PeripheralTableViewController.swift */; };
+		740196381CCEA481008CE298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740196371CCEA481008CE298 /* Main.storyboard */; };
+		7401963A1CCEA485008CE298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740196391CCEA485008CE298 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7401961C1CCEA184008CE298 /* remote-car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remote-car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401961F1CCEA184008CE298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		740196211CCEA184008CE298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		740196241CCEA184008CE298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		740196261CCEA184008CE298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		740196291CCEA184008CE298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7401962B1CCEA184008CE298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		740196311CCEA40A008CE298 /* BLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		740196331CCEA43A008CE298 /* CarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarController.swift; sourceTree = "<group>"; };
+		740196351CCEA43F008CE298 /* PeripheralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewController.swift; sourceTree = "<group>"; };
+		740196371CCEA481008CE298 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		740196391CCEA485008CE298 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				7401961F1CCEA184008CE298 /* AppDelegate.swift */,
+				740196311CCEA40A008CE298 /* BLE.swift */,
+				740196331CCEA43A008CE298 /* CarController.swift */,
+				740196351CCEA43F008CE298 /* PeripheralTableViewController.swift */,
 				740196211CCEA184008CE298 /* ViewController.swift */,
-				740196231CCEA184008CE298 /* Main.storyboard */,
 				740196261CCEA184008CE298 /* Assets.xcassets */,
-				740196281CCEA184008CE298 /* LaunchScreen.storyboard */,
+				740196391CCEA485008CE298 /* LaunchScreen.storyboard */,
+				740196371CCEA481008CE298 /* Main.storyboard */,
 				7401962B1CCEA184008CE298 /* Info.plist */,
 			);
 			path = "remote-car";
@@ -123,9 +132,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7401962A1CCEA184008CE298 /* LaunchScreen.storyboard in Resources */,
+				7401963A1CCEA485008CE298 /* LaunchScreen.storyboard in Resources */,
 				740196271CCEA184008CE298 /* Assets.xcassets in Resources */,
-				740196251CCEA184008CE298 /* Main.storyboard in Resources */,
+				740196381CCEA481008CE298 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +145,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740196341CCEA43A008CE298 /* CarController.swift in Sources */,
+				740196361CCEA43F008CE298 /* PeripheralTableViewController.swift in Sources */,
 				740196221CCEA184008CE298 /* ViewController.swift in Sources */,
+				740196321CCEA40A008CE298 /* BLE.swift in Sources */,
 				740196201CCEA184008CE298 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		740196231CCEA184008CE298 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				740196241CCEA184008CE298 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		740196281CCEA184008CE298 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				740196291CCEA184008CE298 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7401962C1CCEA184008CE298 /* Debug */ = {
@@ -289,6 +282,7 @@
 				740196301CCEA184008CE298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
