@@ -89,10 +89,10 @@
                                     <segue destination="9am-SF-bRR" kind="show" id="Dq3-TQ-WkL"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-oh-K0p">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-oh-K0p">
                                 <rect key="frame" x="47" y="246" width="180" height="31"/>
                                 <connections>
-                                    <action selector="servoSlide:" destination="v5p-lV-BU7" eventType="valueChanged" id="axI-4n-dAB"/>
+                                    <action selector="servoSlide:" destination="v5p-lV-BU7" eventType="touchUpInside" id="rTe-3J-f6D"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cl8-Hz-4iE">

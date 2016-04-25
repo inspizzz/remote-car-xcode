@@ -33,10 +33,11 @@ class CarController: UIViewController {
 
 // Defines what TURN means and also when it recieves the message TURN it will turn the servo 
     @IBAction func servoSlide(sender: UISlider) {
-        print("TURN...")
+        
         
         let val = Int(sender.value)
         let str = "TURN:\(val)"
+        print(str)
         let newData = str as NSString
         let writeType = CBCharacteristicWriteType.WithResponse
         ble.currentPeripheral.writeValue(newData.dataUsingEncoding(NSUTF8StringEncoding)!, forCharacteristic: ble.txCharacteristic!, type: writeType)
