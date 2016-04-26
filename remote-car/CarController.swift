@@ -47,4 +47,22 @@ class CarController: UIViewController {
         
         ble.centralManager?.cancelPeripheralConnection(ble.currentPeripheral)
     }
+    
+    @IBAction func Reverse(sender: UIButton) {
+        print("Writing REVERSE")
+        let str = "REVERSE"
+        let newData = str as NSString
+        let writeType = CBCharacteristicWriteType.WithResponse
+        ble.currentPeripheral.writeValue(newData.dataUsingEncoding(NSUTF8StringEncoding)!, forCharacteristic: ble.txCharacteristic!, type: writeType)
+
+    }
+  
+        
+
 }
+    
+    
+    
+    
+    
+
